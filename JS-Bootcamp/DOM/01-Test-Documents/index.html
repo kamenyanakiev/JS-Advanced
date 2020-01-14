@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="app.js"></script>
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
@@ -18,9 +17,16 @@
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo corrupti molestiae sint blanditiis magnam obcaecati
         fugiat dolore, optio quae sit eius non enim tempora quod iure, incidunt ipsum praesentium assumenda.
     </p>
+    <ul id="todos">
+        <li class="todo">To do 1 <button>X</button></li>
+        <li class="todo">To do 2 <button>X</button></li>
+        <li class="todo">To do 3 <button>X</button></li>
+    </ul>
     <form action="">
-        <input type="text" name="" placeholder="Image Name">
-        <input type="password" name="" placeholder="Password">
+        <input type="text" placeholder="Image Name">
+        <input type="password" placeholder="Password">
+        <input type="checkbox">
+        <input type="range" min="100" max="500" step="50">
         <input type="submit" value="Submit" class="submitBtn">
     </form>
     <button class="hover-button">Hover</button>
@@ -29,7 +35,17 @@
         <li>Second thing</li>
         <li class="special">Third thing</li>
     </ul>
+    <a href="https://www.github.com">Github link</a>
     <img id="image" src="https://images.unsplash.com/photo-1578730261175-0f096e896fe0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80" alt="">
+    <section>
+        <ul>
+            <li>Apples</li>
+            <li class="special">Lemons</li>
+            <li>Oranges</li>
+        </ul>
+    </section>
 </body>
+
+<script src="app.js"></script>
 
 </html>
