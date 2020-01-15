@@ -43,7 +43,9 @@ const itemsUl = document.querySelector('#items');
 
 addItemInput.addEventListener('keypress', function (e) {
     if (event.key === 'Enter') {
-        if (!this.value) return;
+        if (!this.value || this.value.trim().length === 0) {
+            return;
+        }
         const newItemText = this.value;
         const newItem = document.createElement('li');
         newItem.innerText = newItemText;

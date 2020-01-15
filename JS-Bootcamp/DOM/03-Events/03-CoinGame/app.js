@@ -47,18 +47,25 @@ const moveHorizontal = (element, amount) => {
 
 //Gets the top or left position as a string, and returns it as a number without the 'px' at the end
 const extractPos = (pos) => {
-	if (!pos) return 100;
+	if (!pos) {
+		return 100;
+	}
+	
 	return parseInt(pos.slice(0, -2));
 };
 
 //Moves the coin to a random place in the window
 const moveCoin = () => {
-	const x = Math.floor(Math.random() * window.innerWidth);
-	const y = Math.floor(Math.random() * window.innerHeight);
+	const x = getRandomInt(100, window.innerWidth - 100);
+	const y = getRandomInt(100, window.innerHeight - 100);
 	coin.style.top = `${y}px`;
 	coin.style.left = `${x}px`;
 	scoreCounter++;
 	console.log(`Score: ${scoreCounter}`);
 };
+
+const getRandomInt = (min, max) => {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+} 
 
 moveCoin();
