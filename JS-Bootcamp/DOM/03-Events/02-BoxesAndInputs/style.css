@@ -1,0 +1,18 @@
+h1 {
+    text-align: center;
+}
+
+#boxes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+}
+
+#username {
+    margin-top: 1rem;
+}
