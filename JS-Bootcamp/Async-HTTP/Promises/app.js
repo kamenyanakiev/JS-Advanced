@@ -44,7 +44,15 @@ fakeRequest('/users')
         console.log('Status code:', res.status);
         console.log('Data:', res.data);
         console.log('Worked');
-    }).catch((res) => {
+        //By chaining promises with variables from previous ones by using .then, there needs to be only one catch
+        const id = res.data[0].id;
+        return fakeRequest(`/users/${id}`); //Chaining can be done by returning a promise
+    })
+    .then((res) => {
+        //Requires the last promise to be completedE
+        console.log(res);
+    })
+    .catch((res) => {
         console.log(res.status);
         console.log('Request failed');
     });
